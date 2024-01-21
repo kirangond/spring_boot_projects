@@ -1,0 +1,12 @@
+ Git bash commands
+  Jan 21
+  
+  git status
+   to check which all are the files we made changes
+  
+  git add .
+   to add all the files in staging area to track
+   
+  git commit -m 'first time commit'
+   to commit 
+   

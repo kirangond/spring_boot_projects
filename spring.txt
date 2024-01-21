@@ -1,0 +1,223 @@
+Sept 15
+Spring boot
+
+
+download
+https://spring.io/tools
+
+- It will download jar file 
+
+Most companies using
+- Spring Boot web services
+- Hibernate web services
+- Micro services
+
+Extract the jar file - C:\STS
+again extract one more time - Contents.zip  - C:\STS\sts-4.15.3.RELEASE
+
+Spring Starter Project we can't see in eclipse 
+  Type : Maven
+  Java Version : 8 and other keep by default 
+  
+Sept 16
+
+dowload required dependency from https://mvnrepository.com/ 
+
+MySQL Connector/J
+
+<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>8.0.27</version>
+</dependency>
+
+For pdf file generator 
+<!-- https://mvnrepository.com/artifact/com.itextpdf/itextpdf -->
+<dependency>
+    <groupId>com.itextpdf</groupId>
+    <artifactId>itextpdf</artifactId>
+    <version>5.5.13.1</version>
+</dependency>
+
+Maven helps me to dowload project dependency.
+
+Spring intialiser
+https://start.spring.io/
+- Using spring initializer we will create spring project in eclipse.
+
+Group and Package name to be same 
+
+C:\eclipse_with_STS\demo
+
+Unit testing
+
+Framework
+Junit
+TestNg
+
+
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+public class A {
+
+	//by default eclipse provide Junit and we need to import library
+	@Test  
+	public void test1() {
+		System.out.println("from test1");
+	}
+		
+	//Annotation basically instructs the compiler to run this test weather it pass or fail
+		@Test
+		public void test2() {
+			System.out.println("from test2");
+
+	}
+//		@Test
+//		public void test3() {
+//			int x=10/0;
+//			System.out.println(x);
+
+//	}
+		// It runs before every test
+		@Before
+		public void beforeTest()
+		{
+			System.out.println("From beforeTest");
+		}
+		
+		// It runs after every test
+		@After
+		public void afterTest()
+		{
+			System.out.println("afterTest");
+		}
+		
+		//It run before all the method once and should have static method
+	@BeforeClass
+		public static void beforeClass()
+		{
+			System.out.println("Before Class");
+		}
+	
+	@AfterClass
+	public static void afterClass()
+	{
+		System.out.println("After Class");
+	}
+
+    @Test
+	public  void test3()
+	{
+		System.out.println("test3");
+	}
+}
+o/p:
+Before Class
+From beforeTest
+from test1
+afterTest
+From beforeTest
+from test2
+afterTest
+From beforeTest
+test3
+afterTest
+After Class
+
+@Test 
+ - to execute test cases - by default eclipse has junit.
+
+@Before
+  - It will execute before all test cases.
+ 
+@After
+   - It will execute after all test cases.
+   
+@BeforeClass 
+   - It will execute before all test case only once Note: method should be static.
+
+@AfterClass
+  - - It will execute after all test case only once Note: method should be static.
+
+testNg does not comes with eclipse by default
+how to configure 
+https://testng.org/doc/ 
+https://testng.org/doc/eclipse.html#eclipse-installation
+https://testng.org/testng-eclipse-update-site. (https://testng.org/testng-eclipse-update-site/7.4.0)  paste this URL(Eclipse plug-in) in help - Install new software 
+
+
+sept 17
+TestNG 
+
+package com.testng;
+
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+public class A {
+	
+	@Test
+	public void test1()
+	{
+		System.out.println("print test1 result");
+	}
+	
+	@BeforeTest
+	public void beforeTest()
+	{
+		System.out.println("From beforeTest");
+	}
+	
+	@BeforeClass
+	public  void beforeClass()
+	{
+		System.out.println("Before Class");
+	}
+    
+	@AfterTest
+	public void afterTest()
+	{
+		System.out.println("afterTest");
+	}
+	
+	@AfterClass  //static method not required for class annotation but in junit requied
+	public  void afterClass()
+	{
+		System.out.println("After Class");
+	}
+   
+	@Test
+	public void test2()
+	{
+		System.out.println("print test2 result");
+	}
+}
+
+o/p:
+From beforeTest
+Before Class
+print test1 result
+print test2 result
+After Class
+afterTest
+
+
+Before Class
+From beforeTest
+from test1
+afterTest
+From beforeTest
+from test2
+afterTest
+From beforeTest
+test3
+afterTest
+After Class
