@@ -10,3 +10,34 @@
   git commit -m 'first time commit'
    to commit 
    
+  create new repo in github 
+  
+  link repo with local code base.
+   gonda@LAPTOP-4UU3SGMU MINGW64 /c/Spring Boot (master)
+$ git remote add origin https://github.com/kirangond/spring_boot_projects.git
+
+push changes to github repo
+gonda@LAPTOP-4UU3SGMU MINGW64 /c/Spring Boot (master)
+$ git push origin master
+Enumerating objects: 305, done.
+Counting objects: 100% (305/305), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (257/257), done.
+Writing objects: 100% (305/305), 31.61 MiB | 2.41 MiB/s, done.
+Total 305 (delta 28), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (28/28), done.
+To https://github.com/kirangond/spring_boot_projects.git
+ * [new branch]      master -> master
+
+gonda@LAPTOP-4UU3SGMU MINGW64 /c/Spring Boot (master)
+$ git branch jan_coding
+
+gonda@LAPTOP-4UU3SGMU MINGW64 /c/Spring Boot (master)
+$ git checkout jan_coding
+Switched to branch 'jan_coding'
+M       .metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi
+M       demo_crud_operation
+M       git_commands.txt
+ 
+  
+ 
