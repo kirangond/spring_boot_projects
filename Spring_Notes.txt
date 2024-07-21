@@ -87,7 +87,7 @@ Maven helps me to dowload project dependency.
 
 Spring intialiser
 https://start.spring.io/
-- Using spring initializer we will create spring project in eclipse(with maven dependecies).
+- Using spring initializer we will create spring project in eclipse(with maven dependencies).
 
 Group and Package name to be same 
 
