@@ -340,13 +340,16 @@ Spring data JPA
 
 Entity class - the class which mapped to database table name.
 
-JPA - java persistence api takes the data and map to table. 
+JPA - java persistence api takes the data and map to table. (It's similar to oops as a standard)
 
 ORM(object relational mapping) - object mapped to database table.
 
 JPA implmentation
   - hibernate (Is ORM tool) 
-  - exlipselink
+  - eclipselink
+  - toplink
+
+JPA(formely java persistence api) now jakartha persistence is enterprise api that describes the management of relational data(object) 
   
   CRUD operation in springboot
   
