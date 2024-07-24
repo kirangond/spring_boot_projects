@@ -14,4 +14,5 @@ create table student(id int primary key auto_increment,sname varchar(20),scourse
 select * from student;
 
 
+--all tables
 
