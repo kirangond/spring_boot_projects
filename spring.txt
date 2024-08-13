@@ -237,3 +237,4 @@ Aug 1
 Aug 2
 
 Aug 12 - Consistency 
+Aug 13 - watched springboot and webservices videos
